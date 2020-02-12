@@ -42,15 +42,8 @@ class ImageUpload extends Component {
     });
   }
   render() {
-    const style = {
-      height: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
-    };
     return (
-      <div style={style}>
+      <div >
       <progress value={this.state.progress} max="100"/>
       <br/>
         <input type="file" onChange={this.handleChange}/>
