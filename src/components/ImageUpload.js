@@ -4,7 +4,7 @@ import {storage} from '../firebase/firebase';
 class ImageUpload extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = { //initial state
       image: null,
       url: '',
       progress: 0
@@ -21,7 +21,10 @@ class ImageUpload extends Component {
     }
   }
   handleUpload = () => {
-      const {image} = this.state;
+      const {
+        image,
+        imageName
+      } = this.state;
       const uploadTask = storage.ref(`images/${image.name}`).put(image);
       uploadTask.on('state_changed', 
       (snapshot) => {
@@ -43,13 +46,16 @@ class ImageUpload extends Component {
   }
   render() {
     return (
-      <div >
-      <progress value={this.state.progress} max="100"/>
-      <br/>
-        <input type="file" onChange={this.handleChange}/>
-        <button onClick={this.handleUpload}>Upload</button>
+      <div className="upload-form">
+        <progress className="progress" value={this.state.progress} max="100"/>
         <br/>
-        <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height="300" width="400"/>
+        <label for='file-upload' className='custom-file-upload' onChange={this.handleChange}>
+          Choose File 
+          <input id="file-upload" type="file"/>
+        </label>
+        <button className="submit-button" onClick={this.handleUpload}>Upload</button>
+        <br/>
+        <img src={this.state.url || 'http://via.placeholder.com/600'} className='placeholder' alt="Uploaded images" />
       </div>
     )
   }

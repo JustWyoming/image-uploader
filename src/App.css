@@ -1,38 +1,224 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  width: auto;
+  font-family: futura-pt, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #2B313F;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.just-left {
+    float: left;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    position: relative;
+    left: -50px;
+    /* width: 30%; */
+  }
+  #left {
+    height: 10px;
+    background: #F2EA00;
+    width: 487px;  
+    float: left;
+    position: absolute;
+    display: block;
+  }
+  
+  .just-right {
+    float: right;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 700;
+    font-size: 180px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width: 30%;
+    top: 60px;
+    right: 24px;
+    position: absolute;
+  }
+  #right {
+    width: 10px;
+    background: #F2EA00;
+    height: 417px;  
+    display: block;
+    top: 30px;
+    right: 24px;
+    position: absolute;
+  }
+  
+  .uploader {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .progress {
+    margin: 8px 0px;
+  }
+  
+  .custom-file-upload {
+    padding: 8px 16px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: medium;
+    color: #fff;
+    background: #2B313F;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    max-width: 96px;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .submit-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #2B313F;
+    background: white;
+    border: 1px solid #2b313F;
+    width: 96px;
+    margin-left: 0px;
+  }
+  .submit-button:focus {
+    outline: none;
+  }
+  button.submit-button:hover {
+    padding: 8px 16px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: medium;
+    color: #fff;
+    background: #2B313F;
+  }
+  
+  .submit-button:active {
+    border-radius: 4px;
+    color: #2B313F;
+    background: white;
+    border: 1px solid #2b313F;
+    outline: none;  
+  }
+
+@media only screen and (max-width: 320px) {
+  .just-left {
+    font-size: 40px;
+    left: -21px;
+  }
+
+  #left {
+    width: 187px;
+  }
+
+  .just-right {
+    font-size: 60px; 
+    right: -6px;
+    top: 20px;
+  }
+
+  #right {
+    height: 147px;
+    right: 12px;
+  }
+  h1 {
+    font-size: 24px;
+    width: 240px;
+  }
+
+  .upload-form {
+    width: 240px;
+  }
+
+  .placeholder {
+    width: 240px;
+  }
+  .uploader {
+    width: 240px;
+  }
+
+  .custom-file-upload {
+    max-width: 76px;
+    margin-left: -20px;
+  }
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 414px) {
+  .just-right {
+    font-size: 90px; 
+    top: 40px;
+    right: -14px;
+  }
+  #right {
+    height: 247px;
+  }
+  .just-left {
+    font-size: 60px;
+    left: -28px;
+  }
+
+  #left {
+    width: 277px;
+  }
+  .upload-form {
+    width: 360px;
+  }
+
+  .placeholder {
+    width: 360px;
+  }
+  .uploader {
+    width: 360px;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  .uploader {
+    width: 600px;
+  }
+  .placeholder {
+    width: 600px;
+  }
+  .just-right {
+    font-size: 160px; 
+    top: 60px;
+    right: -12px;
+  }
+  .just-right > span.right-bar {
+    height: 447px;
+    width: 10px;
+  }
+  .just-left > span.left-bar {
+    width: 487px;
+    height: 10px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 991px) {
+  .uploader {
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .placeholder {
+    width: auto;
   }
-}
+  .just-right {
+    font-size: 160px; 
+    top: 60px;
+    right: -12px;
+  }
+ #right {
+    height: 447px;
+    width: 10px!important;
+  }
+  #left{
+    width: 487px;
+    height: 10px!important;
+  }
+  
+  }
